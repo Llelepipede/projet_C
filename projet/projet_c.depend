@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1580393613 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\main.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1580397513 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\start.c
+	<stdio.h>
+	<stdlib.h>
+
+1580402654 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\menu.c
+	<stdio.h>
+	<stdlib.h>
+
+1580402635 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\header.h
+
+1580399609 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\visual_change.c
+	<stdio.h>
+	<stdlib.h>
+
+1580402902 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\about.c
+	<stdio.h>
+	<stdlib.h>
+
