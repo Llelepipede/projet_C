@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*test*/
+/*test2*/
 int     start()
 {
     menu();
