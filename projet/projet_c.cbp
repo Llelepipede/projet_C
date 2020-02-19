@@ -41,9 +41,16 @@
 		<Unit filename="menu.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="new_game.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="start.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test_list_chaine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test_list_chaine.h" />
 		<Unit filename="visual_change.c">
 			<Option compilerVar="CC" />
 		</Unit>
