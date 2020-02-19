@@ -2,20 +2,18 @@
 #include <stdlib.h>
 #include <windows.h>
 
-int     ask_space()
+void     ask_space(char *choice)
 {
-    int     choice;
-
     printf("\t>");
-    scanf("%d",&choice);
-
-    return choice;
+    scanf("%s",choice);
 }
 
 void    respond(char *sentence)
 {
     color(4,0);
     printf("\t\t->%s",sentence);
+    color(3,0);
+
 }
 
 

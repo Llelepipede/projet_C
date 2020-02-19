@@ -22,22 +22,22 @@
 	<stdio.h>
 	<stdlib.h>
 
-1580393613 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\main.c
+1582112420 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\main.c
 	<stdio.h>
 	<stdlib.h>
 	"header.h"
 
-1580457736 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\header.h
+1582127260 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\header.h
 
-1582105394 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\menu.c
+1582131311 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\menu.c
 	<stdio.h>
 	<stdlib.h>
 
-1580397513 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\start.c
+1582123851 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\start.c
 	<stdio.h>
 	<stdlib.h>
 
-1582105449 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\visual_change.c
+1582121284 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\visual_change.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -56,4 +56,20 @@
 	"test_list_chaine.h"
 
 1580714778 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_list_chaine.h
+
+1582120229 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_perso_stats.c
+	<stdio.h>
+	<stdlib.h>
+	"test_perso_stats.h"
+	<string.h>
+
+1582119942 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_perso_stats.h
+
+1582131347 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats.c
+	<stdio.h>
+	<stdlib.h>
+	"perso_stats_h.h"
+	<string.h>
+
+1582129541 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats_h.h
 
