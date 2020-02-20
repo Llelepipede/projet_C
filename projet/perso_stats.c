@@ -3,62 +3,132 @@
 #include "perso_stats_h.h"
 #include <string.h>
 
-void    personnage()
+
+typedef struct stats b_perso;
+typedef struct character perso;
+typedef struct list_mob t_Monstropedie;
+typedef struct joueur player;
+
+t_Monstropedie    create_Monstropedie()
 {
-    perso monst_ali;
+    t_Monstropedie monstropedie;
 
-    monst_ali.name = "Ali ton ami";
+    /*ALI TON AMI*/
 
-    monst_ali.lvl = 4;
-    monst_ali.b_hp = 300;
-    monst_ali.b_mana = 0;
-    monst_ali.b_attac = 20;
-    monst_ali.b_deff = 30;
-    monst_ali.b_speed = 15;
+    monstropedie.Ali_ton_ami.name = "Ali ton ami";
+
+    monstropedie.Ali_ton_ami.b_hp = 300;
+    monstropedie.Ali_ton_ami.b_mana = 0;
+    monstropedie.Ali_ton_ami.b_attac = 20;
+    monstropedie.Ali_ton_ami.b_deff = 30;
+    monstropedie.Ali_ton_ami.b_speed = 15;
+
+    monstropedie.Ali_ton_ami.lvl_up_impact[0] = 0.1;
+    monstropedie.Ali_ton_ami.lvl_up_impact[1] = 0.0;
+    monstropedie.Ali_ton_ami.lvl_up_impact[2] = 0.07;
+    monstropedie.Ali_ton_ami.lvl_up_impact[3] = 0.12;
+    monstropedie.Ali_ton_ami.lvl_up_impact[4] = 0.067;
+    printf("%d",monstropedie.Ali_ton_ami.b_hp);
+    /*LA BELLE MERE*/
+
+    monstropedie.La_belle_mere.name = "La belle mere";
+
+    monstropedie.La_belle_mere.b_hp = 150;
+    monstropedie.La_belle_mere.b_mana = 0;
+    monstropedie.La_belle_mere.b_attac = 37;
+    monstropedie.La_belle_mere.b_deff = 7;
+    monstropedie.La_belle_mere.b_speed = 23;
+
+    monstropedie.La_belle_mere.lvl_up_impact[0] = 0.108;
+    monstropedie.La_belle_mere.lvl_up_impact[1] = 0.03;
+    monstropedie.La_belle_mere.lvl_up_impact[2] = 0.087;
+    monstropedie.La_belle_mere.lvl_up_impact[3] = 0.04;
+    monstropedie.La_belle_mere.lvl_up_impact[4] = 0.067;
+
+    /*GOUT LOOM*/
+
+    monstropedie.Gout_Loom.name = "Gout Loom";
+
+    monstropedie.Gout_Loom.b_hp = 200;
+    monstropedie.Gout_Loom.b_mana = 0;
+    monstropedie.Gout_Loom.b_attac = 17;
+    monstropedie.Gout_Loom.b_deff = 50;
+    monstropedie.Gout_Loom.b_speed = 27;
+
+    monstropedie.Gout_Loom.lvl_up_impact[0] = 0.13;
+    monstropedie.Gout_Loom.lvl_up_impact[1] = 0.0;
+    monstropedie.Gout_Loom.lvl_up_impact[2] = 0.09;
+    monstropedie.Gout_Loom.lvl_up_impact[3] = 0.16;
+    monstropedie.Gout_Loom.lvl_up_impact[4] = 0.06;
 
 
-    monst_ali.lvl_up_impact[0] = 0.1;
-    monst_ali.lvl_up_impact[1] = 0.057;
-    monst_ali.lvl_up_impact[2] = 0.07;
-    monst_ali.lvl_up_impact[3] = 0.12;
-    monst_ali.lvl_up_impact[4] = 0.067;
-
-
-    set_lvl_up(&monst_ali);
-    show_stat_of(&monst_ali);
+    return monstropedie;
 }
 
-void    set_lvl_up(perso *monster)
+void    create_mob(b_perso base, perso *mob,int lvl)
+{
+    mob->name = base.name;
+    mob->lvl = lvl;
+    set_lvl_up(base,mob);
+}
+
+
+void    personnage(t_Monstropedie list)
+{
+    perso m_Ali_ton_ami;
+    set_to_zero(&m_Ali_ton_ami);
+    create_mob(list.Ali_ton_ami,&m_Ali_ton_ami,54);
+    show_stat_of(m_Ali_ton_ami);
+}
+
+void    set_to_zero(perso *mob)
+{
+    mob->name = "TEST";
+    mob->hp = 0;
+    mob->mana = 0;
+    mob->attac = 0;
+    mob->deff = 0;
+    mob->speed = 0;
+}
+
+void    set_lvl_up(b_perso base, perso *mob)
 {
     int     i = 0;
 
-    monster->hp = monster->b_hp;
-    monster->mana = monster->b_mana;
-    monster->attac = monster->b_attac;
-    monster->deff = monster->b_deff;
-    monster->speed = monster->b_speed;
+    mob->hp = base.b_hp;
+    mob->mana = base.b_mana;
+    mob->attac = base.b_attac;
+    mob->deff = base.b_deff;
+    mob->speed = base.b_speed;
+    printf("%d\n%d\n",base.b_hp,mob->lvl);
 
-    while(i<monster->lvl)
+    while(i<mob->lvl)
     {
-        monster->hp += monster->b_hp * monster->lvl_up_impact[0];
-        monster->mana += monster->b_mana * monster->lvl_up_impact[1];
-        monster->attac += monster->b_attac * monster->lvl_up_impact[2];
-        monster->deff += monster->b_deff * monster->lvl_up_impact[3];
-        monster->speed += monster->b_speed * monster->lvl_up_impact[4];
+        mob->hp += base.b_hp * base.lvl_up_impact[0];
+        mob->mana += base.b_mana * base.lvl_up_impact[1];
+        mob->attac += base.b_attac * base.lvl_up_impact[2];
+        mob->deff += base.b_deff * base.lvl_up_impact[3];
+        mob->speed += base.b_speed * base.lvl_up_impact[4];
+        printf("%d\n",i);
         i++;
     }
 }
 
-void    show_stat_of(perso *monster)
-{
-    int lvl = monster->lvl;
-    int hp = monster->hp/1.0;
-    int mana = monster->mana/1.0;
-    int attaque = monster->attac/1.0;
-    int deffense = monster->deff/1.0;
-    int vitesse = monster->speed/1.0;
 
-    printf("\t-%s- niveau:%d\n\nhp->%d\nmana->%d\nattaque->%d ( la valeur reel est: %f,arrondie pour plus de clarte)\ndeffense->%d\nvitesse->%d\n",monster->name,lvl,hp,mana,attaque,monster->attac,deffense,vitesse);
+
+
+
+
+
+void    show_stat_of(perso monster)
+{
+    int lvl = monster.lvl;
+    int hp = monster.hp/1.0;
+    int mana = monster.mana/1.0;
+    int attaque = monster.attac/1.0;
+    int deffense = monster.deff/1.0;
+    int vitesse = monster.speed/1.0;
+    printf("\t-%s- niveau:%d\n\nhp->%d\nmana->%d\nattaque->%d ( la valeur reel est: %f,arrondie pour plus de clarte)\ndeffense->%d\nvitesse->%d\n",monster.name,lvl,hp,mana,attaque,monster.attac,deffense,vitesse);
 }
 
 

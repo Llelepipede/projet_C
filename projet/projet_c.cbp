@@ -41,6 +41,7 @@
 		<Unit filename="menu.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="monstropedie.h" />
 		<Unit filename="new_game.c">
 			<Option compilerVar="CC" />
 		</Unit>

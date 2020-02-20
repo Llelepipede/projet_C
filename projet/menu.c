@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "perso_stats_h.h"
+#include "header.h"
 
 
 void    menu()
@@ -15,7 +17,7 @@ void    menu()
         {
         respond("\tetat du projet\n");
         respond("menu jeu : fait\n");
-        respond("stat personnage: en cours(40%)\n");
+        respond("stat personnage: en cours(70%)\n");
         respond("sauvegarde : 0\n");
         respond("map : 0\n");
         respond("combat : 0\n");
@@ -23,12 +25,14 @@ void    menu()
         respond("deplacement : 0\n");
         respond("item : 0\n");
         respond("attaque critique : 0\n");
-        respond("monstre : en cours(5%)\n");
+        respond("monstre : en cours(60%)\n\n");
 
         }
         if (choice == '$') //   ZONE DE TEST, mettre ici les fonctions a essayer , et entrez $ pour la demmarer dans le menu
         {
-            personnage();
+            t_Monstropedie monstropedie;
+            monstropedie = create_Monstropedie();
+            personnage(monstropedie);
         }
         respond("connais pas\n");
         ask_space(&choice);

@@ -27,13 +27,15 @@
 	<stdlib.h>
 	"header.h"
 
-1582127260 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\header.h
+1582202266 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\header.h
 
-1582131311 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\menu.c
+1582202622 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\menu.c
 	<stdio.h>
 	<stdlib.h>
+	"perso_stats_h.h"
+	"header.h"
 
-1582123851 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\start.c
+1582131773 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\start.c
 	<stdio.h>
 	<stdlib.h>
 
@@ -65,11 +67,11 @@
 
 1582119942 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_perso_stats.h
 
-1582131347 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats.c
+1582202520 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats.c
 	<stdio.h>
 	<stdlib.h>
 	"perso_stats_h.h"
 	<string.h>
 
-1582129541 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats_h.h
+1582190284 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats_h.h
 
