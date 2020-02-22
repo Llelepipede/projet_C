@@ -2,17 +2,20 @@
 #include <stdlib.h>
 #include "perso_stats_h.h"
 #include "header.h"
+#include <time.h>
+#include <windows.h>
 
 
 void    menu()
 {
+
     char     choice = '0';
     color(3,0);
     printf("\t\t\t-MAIN MENU-\n\n\t\t1. Create New Game\n\t\t2. Load Saved Game\n\t\t3. About\n\t\t4. Exit\n");
     ask_space(&choice);
-
     while (!(choice>='1' && choice <='4'))
     {
+        system("cls");
         if (choice == '*') //etat du projet , tapez * pour faire apparaitre dans le menu
         {
         respond("\tetat du projet\n");
@@ -30,8 +33,8 @@ void    menu()
         }
         if (choice == '$') //   ZONE DE TEST, mettre ici les fonctions a essayer , et entrez $ pour la demmarer dans le menu
         {
-            t_Monstropedie monstropedie;
-            monstropedie = create_Monstropedie();
+            t_Monstropedie *monstropedie;
+            monstropedie = initiate_mob_Monst();
             personnage(monstropedie);
         }
         respond("connais pas\n");
@@ -40,25 +43,31 @@ void    menu()
     }
     if (choice == '1')
     {
-        printf("not update ...\n");
+        system("cls");
+        printf("\n");
+        respond("not update ...\n\n");
         //personnage();
         //new_game();
         //printf("ok");
-        menu();
+        back_to_menu(3);
 
     }
     else if (choice == '2')
     {
         //load_game();
-        printf("not update ...\n");
-        menu();
+        system("cls");
+        printf("\n");
+        respond("not update ...\n\n");
+        back_to_menu(3);
     }
     else if (choice == '3')
     {
+        system("cls");
         about();
-        menu();
+        back_to_menu(3);
     }
     else
         respond("A la prochaine :)\n");
+
 }
 

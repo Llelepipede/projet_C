@@ -42,6 +42,15 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="monstropedie.h" />
+		<Unit filename="monstropedie_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="monstropedie_update.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="monstropedie_use.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="new_game.c">
 			<Option compilerVar="CC" />
 		</Unit>

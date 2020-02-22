@@ -27,24 +27,27 @@
 	<stdlib.h>
 	"header.h"
 
-1582202266 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\header.h
+1582408683 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\header.h
 
-1582202622 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\menu.c
+1582412103 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"perso_stats_h.h"
 	"header.h"
+	<time.h>
+	<windows.h>
 
 1582131773 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\start.c
 	<stdio.h>
 	<stdlib.h>
 
-1582121284 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\visual_change.c
+1582411778 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\visual_change.c
 	<stdio.h>
 	<stdlib.h>
+	"header.h"
 	<windows.h>
 
-1582105272 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\about.c
+1582387415 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\about.c
 	<stdio.h>
 	<stdlib.h>
 
@@ -67,11 +70,36 @@
 
 1582119942 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_perso_stats.h
 
-1582202520 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats.c
+1582412066 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats.c
 	<stdio.h>
 	<stdlib.h>
 	"perso_stats_h.h"
 	<string.h>
+	"header.h"
 
-1582190284 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats_h.h
+1582406845 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats_h.h
+
+1582286188 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+	"perso_stats_h.h"
+
+1582408690 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_init.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+	"perso_stats_h.h"
+
+1582411519 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_update.c
+	<stdio.h>
+	<stdlib.h>
+	"perso_stats_h.h"
+	"header.h"
+
+1582411818 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_use.c
+	<stdio.h>
+	<stdlib.h>
+	"perso_stats_h.h"
+	<string.h>
 
