@@ -13,6 +13,8 @@ void    menu()
     color(3,0);
     printf("\t\t\t-MAIN MENU-\n\n\t\t1. Create New Game\n\t\t2. Load Saved Game\n\t\t3. About\n\t\t4. Exit\n");
     ask_space(&choice);
+    t_Monstropedie *monstropedie;
+    monstropedie = initiate_mob_Monst();
     while (!(choice>='1' && choice <='4'))
     {
         system("cls");
@@ -28,13 +30,11 @@ void    menu()
         respond("deplacement : 0\n");
         respond("item : 0\n");
         respond("attaque critique : 0\n");
-        respond("monstre : en cours(60%)\n\n");
+        respond("monstre : fini (à 90%)\n\n");
 
         }
         if (choice == '$') //   ZONE DE TEST, mettre ici les fonctions a essayer , et entrez $ pour la demmarer dans le menu
         {
-            t_Monstropedie *monstropedie;
-            monstropedie = initiate_mob_Monst();
             personnage(monstropedie);
         }
         respond("connais pas\n");

@@ -12,9 +12,11 @@ typedef struct joueur player;
 
 void    personnage(t_Monstropedie *list)
 {
-    create_b_mob(list,"Janin_Genieux",300,0.1,0,0,33,0.1,20,0.1,27,0.1);
-    create_b_mob(list,"La_Belle_Mere",300,0.1,0,0,33,0.1,20,0.1,27,0.1);
-    perso   mob;
+                                             //Heal point|hp/lvl|mana|maana/lvl|attaque|att/lvl|deff|deff/lvl|vitesse|vitesse/lvl
+    create_b_mob(list,"Janin_Genieux", 300       ,0.1   ,0   ,0        ,33     ,0.1    ,20  ,0.1     ,27     ,0.1        );
+    create_b_mob(list,"La_Belle_Mere", 50        ,0.108 ,0   ,0        ,33     ,0.1    ,20  ,0.1     ,27     ,0.1        );
+    create_b_mob(list,"Ali_ton_ami",100,0.1,0,0,20,0.07,30,0.12,15,0.067);
+    b_perso mob;
     char    choice;
     int     lvl;
     printf("\n\n");
