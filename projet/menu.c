@@ -43,13 +43,15 @@ void    menu()
     }
     if (choice == '1')
     {
+        int ***map;
         system("cls");
         printf("\n");
         respond("not update ...\n\n");
         //personnage();
-        //new_game();
+        map = map_create(map,6);
+        show_map(map,6);
         //printf("ok");
-        back_to_menu(3);
+        //back_to_menu(3);
 
     }
     else if (choice == '2')

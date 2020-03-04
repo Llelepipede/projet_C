@@ -24,7 +24,7 @@ b_perso         initiate_mob(b_perso *previous,b_perso *next);
 t_Monstropedie  *initiate_mob_Monst();
 void            add_mob(t_Monstropedie *list,b_perso *mob);
 void            back_to_menu(int time);
-void            create_b_mob(t_Monstropedie *list,char *name, int hp, float hp_lvl, int mana, float mana_lvl, int attaque, float attaque_lvl, int deffense, float deffense_lvl, int vitesse, float vitesse_lvl);
+void            create_b_mob(t_Monstropedie *list,char *name, int hp, float hp_lvl, int attaque, float attaque_lvl, int deffense, float deffense_lvl, int vitesse, float vitesse_lvl);
 b_perso         *find_in_monstropedie(t_Monstropedie *m_list,char *name);
 
 
