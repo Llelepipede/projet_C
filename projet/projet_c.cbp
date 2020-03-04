@@ -35,6 +35,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="header.h" />
+		<Unit filename="in_game.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -52,6 +55,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="monstropedie_use.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="moove.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="new_game.c">

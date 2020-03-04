@@ -26,6 +26,7 @@ void            add_mob(t_Monstropedie *list,b_perso *mob);
 void            back_to_menu(int time);
 void            create_b_mob(t_Monstropedie *list,char *name, int hp, float hp_lvl, int attaque, float attaque_lvl, int deffense, float deffense_lvl, int vitesse, float vitesse_lvl);
 b_perso         *find_in_monstropedie(t_Monstropedie *m_list,char *name);
-
-
+void            deplacement(int ***map,char     moov);
+int             *to_find_in_map(int ***map, int sizeofmap ,int player_type);
+void            show_map(int ***map,int sizeofmap);
 #endif // HEADER_H_INCLUDED

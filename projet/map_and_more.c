@@ -41,9 +41,37 @@ int     ***map_create(int ***map,int sizeofmap)
         colonne--;
     }
     map[4][4][1]=1;
+    map[2][2][0]=1;
     //printf("malloc complete\n");
     return map;
 }
+
+
+int     *to_find_in_map(int ***map, int sizeofmap ,int player_type)
+{
+    int j,i;
+    int *result;
+    result = (int*)malloc(sizeof(int)*2);
+    j = 0;
+
+    while(j<sizeofmap)
+    {
+        i = 0;
+        while(i<sizeofmap)
+        {
+            if (map[j][i][1] == player_type)
+            {
+                result[0]=j;
+                result[1]=i;
+                return result;
+            }
+            i++;
+        }
+        j++;
+    }
+    return 0,0;
+}
+
 
 void    show_map(int ***map,int sizeofmap)
 {
@@ -51,9 +79,10 @@ void    show_map(int ***map,int sizeofmap)
     int     j = 0;
 
     system("cls");
-    printf("\nvous etes dans la foret\n\n");
-    color(0,0);
+    printf("\n");
+    color(0,7);
     printf(" ");
+    //map[2][3][1]=1;
     while (j < sizeofmap)
     {
         printf("    ");
@@ -62,46 +91,68 @@ void    show_map(int ***map,int sizeofmap)
     printf("\n");
     while (i < sizeofmap)
     {
-
-
+        color(0,7);
         printf(" ");
         j = 0;
         while (j < sizeofmap)
         {
-
-            if (map[i][j][0])
-                color(0,7);
+            if (map[i][j][1])
+            {
+                if (map[i][j][0]==0)
+                    color(0,2);
+                if (map[i][j][0]==1)
+                    color(0,3);
+            }
             else
-                color(0,2);
+                color(0,0);
             printf(" ");
 
-            if (map[i][j][1])
+            if (map[i][j][1] == 1)
                 color(0,4);
             printf(" ");
 
-            if (map[i][j][0])
-                color(0,7);
+            if (map[i][j][1])
+            {
+                if (map[i][j][0]==0)
+                    color(0,2);
+                if (map[i][j][0]==1)
+                    color(0,3);
+            }
             else
-                color(0,2);
+                color(0,0);
             printf(" ");
 
             color(0,0);
-
+            if ( j == sizeofmap-1)
+                color(0,7);
             printf(" ");
             j++;
         }
         printf("\n");
-        color(0,0);
+        color(0,7);
         printf(" ");
+        color(0,0);
+        if (i == sizeofmap - 1)
+            color(0,7);
         while (j > 0)
         {
-            printf("    ");
+
+            printf("   ");
+            if (j == 1)
+                color(0,7);
+            printf(" ");
+            if (i != sizeofmap-1)
+                color(0,0);
             j--;
+
         }
         printf("\n");
 
         i++;
     }
     color(7,0);
-
+    printf("\n");
 }
+
+
+

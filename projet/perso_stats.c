@@ -13,12 +13,14 @@ typedef struct joueur player;
 void    personnage(t_Monstropedie *list)
 {
                                      //Heal point|hp/lvl|attaque|att/lvl|deff|deff/lvl|vitesse|vitesse/lvl
-    create_b_mob(list,"Janin_Genieux" ,300       ,0.1   ,33     ,0.1    ,20  ,0.1     ,27     ,0.1        );
-    create_b_mob(list,"La_Belle_Mere" ,50        ,0.108 ,37     ,0.087  ,12  ,0.04    ,23     ,0.1        );
-    create_b_mob(list,"Ali_ton_ami"   ,100       ,0.1   ,20     ,0.07   ,30  ,0.12    ,15     ,0.067      );
-    create_b_mob(list,"Gout_Loom"     ,125       ,0.13  ,17     ,0.098  ,40  ,0.157   ,27     ,0.1        );
-    create_b_mob(list,"Farmer"        ,35        ,0.18  ,12     ,0.098  ,7   ,0.157   ,14     ,0.1        );
-    create_b_mob(list,"Glagladiateur" ,42        ,0.18  ,8      ,0.098  ,10  ,0.157   ,7      ,0.1        );
+    create_b_mob(list,"janin_genieux" ,300       ,0.1   ,33     ,0.1    ,20  ,0.1     ,27     ,0.1        );
+    create_b_mob(list,"la_belle_mere" ,50        ,0.108 ,37     ,0.087  ,12  ,0.04    ,23     ,0.1        );
+    create_b_mob(list,"ali_ton_ami"   ,100       ,0.1   ,20     ,0.07   ,30  ,0.12    ,15     ,0.067      );
+    create_b_mob(list,"gout_loom"     ,125       ,0.13  ,17     ,0.098  ,40  ,0.157   ,27     ,0.1        );
+    create_b_mob(list,"farmer"        ,35        ,0.18  ,12     ,0.098  ,7   ,0.157   ,14     ,0.1        );
+    create_b_mob(list,"glagladiateur" ,42        ,0.18  ,8      ,0.098  ,10  ,0.157   ,7      ,0.1        );
+    create_b_mob(list,"joueur" ,42        ,0.18  ,8      ,0.098  ,10  ,0.157   ,7      ,0.1        );
+
     b_perso mob;
     char    choice;
     int     lvl;
@@ -38,7 +40,6 @@ void    create_mob(b_perso *base, perso *mob,int lvl)
         mob->name = base->name;
         mob->lvl = lvl;
         set_lvl_up(*base,mob,10);
-        show_stat_of(*mob);
     }
     else
     {
