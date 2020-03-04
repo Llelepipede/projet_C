@@ -70,7 +70,6 @@ void    set_to_zero(perso *mob)
 {
     mob->name = "TEST";
     mob->hp = 0;
-    mob->mana = 0;
     mob->attac = 0;
     mob->deff = 0;
     mob->speed = 0;

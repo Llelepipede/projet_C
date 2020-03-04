@@ -28,7 +28,7 @@ struct character{
     float   deff;
     float   speed;
     float   hp;
-    float   mana;
+
 };
 
 

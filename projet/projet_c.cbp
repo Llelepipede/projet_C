@@ -38,6 +38,9 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="map_and_more.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="menu.c">
 			<Option compilerVar="CC" />
 		</Unit>

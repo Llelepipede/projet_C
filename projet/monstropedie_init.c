@@ -94,7 +94,6 @@ b_perso     initiate_mob(b_perso *previous,b_perso *next)
     mob->next = next;
     mob->previous = previous;
     mob->b_hp = 0;
-    mob->b_mana = 0;
     mob->b_attac = 0;
     mob->b_deff = 0;
     mob->b_speed = 0;
