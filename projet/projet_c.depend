@@ -29,7 +29,7 @@
 
 1583311866 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\header.h
 
-1583312005 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\menu.c
+1583315434 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"perso_stats_h.h"
@@ -51,9 +51,13 @@
 	<stdio.h>
 	<stdlib.h>
 
-1580727391 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\new_game.c
+1583317698 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\new_game.c
 	<stdio.h>
 	<stdlib.h>
+	"perso_stats_h.h"
+	"header.h"
+	<time.h>
+	<windows.h>
 
 1580714775 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_list_chaine.c
 	<stdio.h>
@@ -70,7 +74,7 @@
 
 1582119942 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_perso_stats.h
 
-1583311826 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats.c
+1583315434 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats.c
 	<stdio.h>
 	<stdlib.h>
 	"perso_stats_h.h"
@@ -85,7 +89,7 @@
 	"header.h"
 	"perso_stats_h.h"
 
-1582408690 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_init.c
+1583314388 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_init.c
 	<stdio.h>
 	<stdlib.h>
 	"header.h"
@@ -102,4 +106,8 @@
 	<stdlib.h>
 	"perso_stats_h.h"
 	<string.h>
+
+1583317639 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\map_and_more.c
+	<stdio.h>
+	<stdlib.h>
 

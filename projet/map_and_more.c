@@ -31,14 +31,16 @@ int     ***map_create(int ***map,int sizeofmap)
                 return (0);
             }
             map[sizeofmap - colonne][sizeofmap - ligne][0] = 0;
-            map[sizeofmap - colonne][sizeofmap - ligne][1] = 1;
+            map[sizeofmap - colonne][sizeofmap - ligne][1] = 0;
             //printf("->%d, %d\n",map[sizeofmap - colonne][sizeofmap - ligne][0],map[sizeofmap - colonne][sizeofmap - ligne][1]);
             //printf("malloc done\n");
             ligne --;
         }
+
         ligne = sizeofmap;
         colonne--;
     }
+    map[4][4][1]=1;
     //printf("malloc complete\n");
     return map;
 }
@@ -48,16 +50,58 @@ void    show_map(int ***map,int sizeofmap)
     int     i = 0;
     int     j = 0;
 
+    system("cls");
+    printf("\nvous etes dans la foret\n\n");
+    color(0,0);
+    printf(" ");
+    while (j < sizeofmap)
+    {
+        printf("    ");
+        j++;
+    }
+    printf("\n");
     while (i < sizeofmap)
     {
+
+
+        printf(" ");
+        j = 0;
         while (j < sizeofmap)
         {
-            printf("\(%d , %d\)",map[i][j][0],map[i][j][1]);
+
+            if (map[i][j][0])
+                color(0,7);
+            else
+                color(0,2);
+            printf(" ");
+
+            if (map[i][j][1])
+                color(0,4);
+            printf(" ");
+
+            if (map[i][j][0])
+                color(0,7);
+            else
+                color(0,2);
+            printf(" ");
+
+            color(0,0);
+
+            printf(" ");
             j++;
         }
-        j = 0;
         printf("\n");
+        color(0,0);
+        printf(" ");
+        while (j > 0)
+        {
+            printf("    ");
+            j--;
+        }
+        printf("\n");
+
         i++;
     }
+    color(7,0);
 
 }

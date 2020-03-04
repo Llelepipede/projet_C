@@ -46,10 +46,8 @@ void    menu()
         int ***map;
         system("cls");
         printf("\n");
-        respond("not update ...\n\n");
         //personnage();
-        map = map_create(map,6);
-        show_map(map,6);
+        new_game();
         //printf("ok");
         //back_to_menu(3);
 
