@@ -26,7 +26,7 @@ void    menu()
         respond("sauvegarde : 0\n");
         respond("map : 0\n");
         respond("combat : 0\n");
-        respond("scenario : 0\n");
+        respond("scenario : fini (a 100%)\n");
         respond("deplacement : 0\n");
         respond("item : 0\n");
         respond("attaque critique : 0\n");
