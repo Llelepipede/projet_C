@@ -9,16 +9,16 @@
 void    menu()
 {
 
-    char     choice = '0';
+    int choice = 0;
     color(3,0);
     printf("\t\t\t-MAIN MENU-\n\n\t\t1. Create New Game\n\t\t2. Load Saved Game\n\t\t3. About\n\t\t4. Exit\n");
-    ask_space(&choice);
+    choice = _getch();
     t_Monstropedie *monstropedie;
     monstropedie = initiate_mob_Monst();
-    while (!(choice>='1' && choice <='4'))
+    while (!(choice == 38 || choice == 130 || choice == 34 || choice == 39 || choice == 49 || choice == 50 || choice == 51 || choice == 52))
     {
         system("cls");
-        if (choice == '*') //etat du projet , tapez * pour faire apparaitre dans le menu
+        if (choice == 42 || choice == 230) //etat du projet , tapez * pour faire apparaitre dans le menu
         {
         respond("\tetat du projet\n");
         respond("menu jeu : fait\n");
@@ -33,17 +33,16 @@ void    menu()
         respond("monstre : fini (à 90%) manque encore la partie xp\n\n");
 
         }
-        if (choice == '$') //   ZONE DE TEST, mettre ici les fonctions a essayer , et entrez $ pour la demmarer dans le menu
+        if (choice == 36) //   ZONE DE TEST, mettre ici les fonctions a essayer , et entrez $ pour la demmarer dans le menu
         {
             personnage(monstropedie);
         }
         respond("connais pas\n");
-        ask_space(&choice);
+        back_to_menu(3);
 
     }
-    if (choice == '1')
+    if (choice == 38 || choice == 49)
     {
-        int ***map;
         system("cls");
         printf("\n");
         //personnage();
@@ -52,7 +51,7 @@ void    menu()
         back_to_menu(3);
 
     }
-    else if (choice == '2')
+    else if (choice == 130 || choice == 50)
     {
         //load_game();
         system("cls");
@@ -60,7 +59,7 @@ void    menu()
         respond("not update ...\n\n");
         back_to_menu(3);
     }
-    else if (choice == '3')
+    else if (choice == 34 || choice == 51)
     {
         system("cls");
         about();

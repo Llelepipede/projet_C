@@ -19,9 +19,9 @@ void    personnage(t_Monstropedie *list)
     create_b_mob(list,"gout_loom"     ,125       ,0.13  ,17     ,0.098  ,40  ,0.157   ,27     ,0.1        );
     create_b_mob(list,"farmer"        ,35        ,0.18  ,12     ,0.098  ,7   ,0.157   ,14     ,0.1        );
     create_b_mob(list,"glagladiateur" ,42        ,0.18  ,8      ,0.098  ,10  ,0.157   ,7      ,0.1        );
-    create_b_mob(list,"joueur" ,42        ,0.18  ,8      ,0.098  ,10  ,0.157   ,7      ,0.1        );
+    create_b_mob(list,"joueur"        ,50        ,0.12  ,10     ,0.11   ,10  ,0.1     ,12     ,0.1        );
 
-    b_perso mob;
+    perso mob;
     char    choice;
     int     lvl;
     printf("\n\n");
@@ -31,6 +31,7 @@ void    personnage(t_Monstropedie *list)
     printf("\t>");
     scanf("%d",&lvl);
     create_mob(find_in_monstropedie(list,&choice),&mob,lvl);
+    show_stat_of(mob);
 }
 
 void    create_mob(b_perso *base, perso *mob,int lvl)

@@ -13,12 +13,11 @@ void    in_game(int ***map,perso joueur,t_Monstropedie list)
     show_map(map,9);
     while (1)
     {
-
         touche = _getch();
         if (touche==0xE0) // fleche : le code fleche renvoie 2 caracteres.
         {
 
-            touche = _getch();
+        touche = _getch();
             if (touche==80)  // fleche bas
             {
                 deplacement(map,'s');
@@ -36,7 +35,10 @@ void    in_game(int ***map,perso joueur,t_Monstropedie list)
                 deplacement(map,'d');
             }
 
+
         }
+        //printf("%d",touche);
+        //Sleep(1000);
         show_map(map,9);
     }
 }

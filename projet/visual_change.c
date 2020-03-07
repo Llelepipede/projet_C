@@ -11,6 +11,11 @@ void     ask_space(char *choice)
 
 void    back_to_menu(int time)
 {
+    int choice;
+    respond("(press Entr to return to menu)\n\n");
+    do{
+        choice = _getch();
+    } while(choice != 13);
     printf("Back to menu");
     while(time)
     {

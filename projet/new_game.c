@@ -4,12 +4,13 @@
 #include "header.h"
 #include <time.h>
 #include <windows.h>
+#include "map.h"
 
 
 void    new_game()
 {
     int     sizeofmap = 9;
-    int     ***map;
+    t_map     ***map;
 
     t_Monstropedie *list;
     list = initiate_mob_Monst();
@@ -27,6 +28,8 @@ void    new_game()
 
     map = map_create(map,sizeofmap);
 
+    printf("%d\n",map[4][4]->map_type->design[1][1].color);
+    Sleep(300);
     //show_map(map, 9);
     in_game(map,joueur,list);
 }

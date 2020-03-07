@@ -2,31 +2,60 @@
 #define HEADER_H_INCLUDED
 
 
+/*perso_stats_h.h*/
 typedef struct  stats       b_perso;
 typedef struct  list_mob    t_Monstropedie;
 typedef struct  character   perso;
 typedef struct  joueur      player;
 
-void            set_to_zero(perso *mob);
+/*map.h*/
+typedef struct s_case_type  t_case_type;
+typedef struct s_map_type   t_map_type;
+typedef struct s_map        t_map;
+
+/*start.c*/
 int             start();
+
+/*menu.c*/
 void            menu();
-void            ask_space(char *choice);
-void            respond(char *sentence);
+
+/*about.c*/
 void            about();
-void            new_game();
-int             ***map_create();
-void            personnage(t_Monstropedie *list);
-void            set_lvl_up(b_perso base,perso *mob,int lvl);
-void            show_stat_of(perso mob);
-t_Monstropedie  create_Monstropedie();
-void            make_and_show(b_perso base,perso *mob,int lvl);
-b_perso         initiate_mob(b_perso *previous,b_perso *next);
-t_Monstropedie  *initiate_mob_Monst();
-void            add_mob(t_Monstropedie *list,b_perso *mob);
+
+/*visual_change.c*/
+void            ask_space(char *choice);
 void            back_to_menu(int time);
+void            respond(char *sentence);
+void            color(int text,int font);
+
+/*perso_stats.c*/
+void            personnage(t_Monstropedie *list);
+void            create_mob(b_perso *base, perso *mob,int lvl);
+void            set_to_zero(perso *mob);
+void            set_lvl_up(b_perso base,perso *mob,int lvl);
+void            show_stat_of(perso monster);
+
+/*monstropedie_init.c*/
+t_Monstropedie  *initiate_mob_Monst();
+b_perso         initiate_mob(b_perso *previous,b_perso *next);
+
+/*monstropedie_update.c*/
 void            create_b_mob(t_Monstropedie *list,char *name, int hp, float hp_lvl, int attaque, float attaque_lvl, int deffense, float deffense_lvl, int vitesse, float vitesse_lvl);
+void            add_mob(t_Monstropedie *list,b_perso *mob);
+
+/*monstropedie_use.c*/
 b_perso         *find_in_monstropedie(t_Monstropedie *m_list,char *name);
-void            deplacement(int ***map,char     moov);
-int             *to_find_in_map(int ***map, int sizeofmap ,int player_type);
-void            show_map(int ***map,int sizeofmap);
+
+/*new_game.c*/
+void            new_game();
+
+/*map_and_more.c*/
+t_map           ***map_create(t_map ***map,int sizeofmap);
+int             *to_find_in_map(t_map ***map, int sizeofmap ,int player_type);
+int             *to_find_in_case(t_map_type *map_type, int sizeofmap ,int player_type);
+void            show_map(t_map ***map,int sizeofmap);
+
+/*moove.c*/
+void            deplacement(t_map ***map,char     moov);
+
 #endif // HEADER_H_INCLUDED
