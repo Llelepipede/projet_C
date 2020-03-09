@@ -58,8 +58,6 @@ void    show_combat(perso    *player,perso    *mob)
     int     colonne;
     int     num_char_in_name;
     char    to_input;
-    mob->hp -= 5;
-    player->hp -= 10;
     int differenciel_mob = ((mob->hp/mob->hp_max)/0.01)/1;
     int differenciel_play =((player->hp/player->hp_max)/0.01)/1;
 
