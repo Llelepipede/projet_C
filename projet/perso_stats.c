@@ -1,14 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "perso_stats_h.h"
-#include <string.h>
 #include "header.h"
-
-
-typedef struct stats b_perso;
-typedef struct character perso;
-typedef struct list_mob t_Monstropedie;
-typedef struct joueur player;
+#include <time.h>
+#include <windows.h>
 
 void    personnage(t_Monstropedie *list)
 {
@@ -99,17 +93,19 @@ void    set_lvl_up(b_perso base, perso *mob,int lvl)
         mob->speed += base.b_speed * base.lvl_up_impact[4];
         i++;
     }
+    mob->hp_max = mob->hp;
 }
 
 
 void    show_stat_of(perso monster)
 {
+
     int lvl = monster.lvl;
     int hp = monster.hp/1.0;
     int attaque = monster.attac/1.0;
     int deffense = monster.deff/1.0;
     int vitesse = monster.speed/1.0;
-    printf("\n\t-%s- niveau:%d\n\nhp->%d\nattaque->%d ( la valeur reel est: %f,arrondie pour plus de clarte)\ndeffense->%d\nvitesse->%d\n",monster.name,lvl,hp,attaque,monster.attac,deffense,vitesse);
+    printf("\n\t-%s- niveau:%d\n\nhp->%d ()\nattaque->%d ( la valeur reel est: %f,arrondie pour plus de clarte)\ndeffense->%d\nvitesse->%d\n",monster.name,lvl,hp,attaque,monster.attac,deffense,vitesse);
 }
 
 

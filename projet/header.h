@@ -1,6 +1,14 @@
 #ifndef HEADER_H_INCLUDED
 #define HEADER_H_INCLUDED
 
+#include "map.h"
+#include "perso_stats_h.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <windows.h>
+
+
 
 /*perso_stats_h.h*/
 typedef struct  stats       b_perso;
@@ -56,6 +64,13 @@ int             *to_find_in_case(t_map_type *map_type, int sizeofmap ,int player
 void            show_map(t_map ***map,int sizeofmap);
 
 /*moove.c*/
-void            deplacement(t_map ***map,char     moov);
+int             deplacement(t_map ***map,char     moov);
+
+/*test_color.c*/
+void  test_color();
+
+/*combat.c*/
+void    combat(perso    *player,perso    *mob);
+void    show_combat(perso    *player,perso    *mob);
 
 #endif // HEADER_H_INCLUDED

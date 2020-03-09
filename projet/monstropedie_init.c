@@ -1,12 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "header.h"
-#include "perso_stats_h.h"
-
-typedef struct stats b_perso;
-typedef struct list_mob t_Monstropedie;
-typedef struct character perso;
-typedef struct joueur player;
+#include <time.h>
+#include <windows.h>
 
 t_Monstropedie     *initiate_mob_Monst()
 {

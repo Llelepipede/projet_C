@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "test_list_chaine.h"
+#include "header.h"
+#include <time.h>
+#include <windows.h>
 
-t_item     add_item()
-{
-
-}

@@ -34,6 +34,9 @@
 		<Unit filename="about.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="combat.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="header.h" />
 		<Unit filename="in_game.c">
 			<Option compilerVar="CC" />
@@ -69,7 +72,13 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="perso_stats_h.h" />
+		<Unit filename="show_map.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="start.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test_color.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test_list_chaine.c">

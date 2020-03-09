@@ -1,13 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "perso_stats_h.h"
-#include <string.h>
-
-
-typedef struct stats b_perso;
-typedef struct character perso;
-typedef struct list_mob t_Monstropedie;
-typedef struct joueur player;
+#include "header.h"
+#include <time.h>
+#include <windows.h>
 
 
 b_perso     *find_in_monstropedie(t_Monstropedie *m_list,char *name)

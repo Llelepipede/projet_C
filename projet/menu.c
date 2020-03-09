@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "perso_stats_h.h"
 #include "header.h"
 #include <time.h>
 #include <windows.h>
@@ -31,7 +30,7 @@ void    menu()
         respond("item : 0\n");
         respond("attaque critique : 0\n");
         respond("monstre : fini (à 90%) manque encore la partie xp\n\n");
-
+        test_color();
         }
         if (choice == 36) //   ZONE DE TEST, mettre ici les fonctions a essayer , et entrez $ pour la demmarer dans le menu
         {

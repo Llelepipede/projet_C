@@ -28,23 +28,16 @@ struct character{
     float   deff;
     float   speed;
     float   hp;
+    float   hp_max;
 
 };
-
-
-/*struct list_mob{
-    b_perso  La_belle_mere;
-    b_perso  Ali_ton_ami;
-    b_perso  Gout_Loom;
-    b_perso  Farmer;
-    b_perso  En_garde;
-    b_perso  Janin_Genieux;
-};*/
 
 
 struct list_mob{
     b_perso first;
     b_perso last;
 };
+
+
 
 #endif // __h_perso__

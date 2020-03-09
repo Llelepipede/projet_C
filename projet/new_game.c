@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "perso_stats_h.h"
 #include "header.h"
 #include <time.h>
 #include <windows.h>
-#include "map.h"
 
 
 void    new_game()
@@ -27,9 +25,6 @@ void    new_game()
     create_mob(find_in_monstropedie(list,"joueur"),&joueur,5);
 
     map = map_create(map,sizeofmap);
-
-    printf("%d\n",map[4][4]->map_type->design[1][1].color);
-    Sleep(300);
     //show_map(map, 9);
     in_game(map,joueur,list);
 }

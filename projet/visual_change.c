@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "header.h"
+#include <time.h>
 #include <windows.h>
 
 void     ask_space(char *choice)
