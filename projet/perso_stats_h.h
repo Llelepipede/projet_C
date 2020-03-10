@@ -37,6 +37,9 @@ struct character{
     float   hp;
     float   hp_max;
 
+    int     xp;
+    int     xp_not_lvl_up;
+    int     xp_to_lvlup;
     t_competence *comp;
 
 };

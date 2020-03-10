@@ -7,6 +7,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <windows.h>
+#include <math.h>
+
 
 
 
@@ -41,7 +43,10 @@ void            personnage(t_Monstropedie *list);
 void            create_mob(b_perso *base, perso *mob,int lvl);
 void            set_to_zero(perso *mob);
 void            set_lvl_up(b_perso base,perso *mob,int lvl);
+void            show_stat_after_fight(perso monster,int     xp_earn);
 void            show_stat_of(perso monster);
+void            lvl_up(perso    *mob,b_perso    *base);
+void            heal(perso  *mob);
 
 /*monstropedie_init.c*/
 t_Monstropedie  *initiate_mob_Monst();
@@ -74,6 +79,7 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list);
 
 /*combat.c*/
 int    combat(perso    *player,perso    *mob);
+int     flee();
 void    do_comp(perso *attaquant, perso *defenseur, perso *player, perso *mob);
 void    attaque(perso *attaquant, perso *defenseur, perso *player, perso *mob);
 void    show_combat(perso    *player,perso    *mob);

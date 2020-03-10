@@ -39,6 +39,7 @@ int    combat(perso    *player,perso    *mob)
         {
             action = 3;
         }
+
         if (action == 1)
         {
             if (player->speed >= mob->speed)
@@ -252,8 +253,19 @@ void    do_comp(perso *attaquant, perso *defenseur, perso *player, perso *mob)
         _getch();
         system("cls");
         show_combat(player,mob);
-        printf("%s frappe %s de toute ces forces,\n%s inflige %d point%c de degat%c\n",attaquant->name,defenseur->name,attaquant->name,dammage_to_endure_i,dammage_to_endure_i>1?'s':' ',dammage_to_endure_i>1?'s':' ');
-
+        printf("%s utilise:\"%s\" sur %s,\n%s %s %d point%c de degat%c\n",attaquant->name,attaquant->comp->name,(attaquant->comp->target == 1 ? attaquant->name : defenseur->name),(attaquant->comp->target == 1 ? attaquant->name : defenseur->name),(attaquant->comp->target == 1 ? "se soigne de" : "subit"),dammage_to_endure_i,dammage_to_endure_i>1?'s':' ',dammage_to_endure_i>1?'s':' ');
+         if (attaquant->comp->bonus_effect==1 || attaquant->comp->bonus_effect==-1)
+        {
+            printf("%s a augmente son attaque de %d %% \n",attaquant->name,attaquant->comp->bonus_effect_rate);
+        }
+        if (attaquant->comp->bonus_effect==2 || attaquant->comp->bonus_effect==-2)
+        {
+            printf("%s a augmente sa deffense de %d %% \n",attaquant->name,attaquant->comp->bonus_effect_rate);
+        }
+        if (attaquant->comp->bonus_effect==3 || attaquant->comp->bonus_effect==-3)
+        {
+            printf("%s a augmente sa vitesse de %d %% \n",attaquant->name,attaquant->comp->bonus_effect_rate);
+        }
     }
     else
     {
@@ -395,14 +407,6 @@ void    show_combat(perso    *player,perso    *mob)
                         color(11,7);
                 }
             }
-            if (ligne == 9)  //liste des choix
-            {
-                if (colonne>=marge && colonne <= 80-marge)
-                {
-                    to_input = 'x';
-                }
-
-            }
 
             if ((ligne != 7 || colonne != marge) &&( ligne != 8 || colonne != marge) && (ligne != 2 || colonne != (80-27-marge)) &&( ligne != 3 || colonne != (80-27-marge)))
                 printf("%c",to_input);
@@ -445,5 +449,7 @@ void    show_combat(perso    *player,perso    *mob)
 
     printf("\n        a:attaque cout:0           z:%s cout:%d",player->comp->name,player->comp->cost);
     printf("\n\n        q:fuir    cout:0\n");
+    printf("\n\nderoulement du combat:\n\n");
+
 }
 

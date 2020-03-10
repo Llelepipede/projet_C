@@ -25,27 +25,28 @@
 1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\main.c
 	"header.h"
 
-1583800883 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\header.h
+1583876102 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\header.h
 	"map.h"
 	"perso_stats_h.h"
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	<windows.h>
+	<math.h>
 
-1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\menu.c
+1583864035 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\menu.c
 	"header.h"
 
 1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\start.c
 	"header.h"
 
-1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\visual_change.c
+1583874276 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\visual_change.c
 	"header.h"
 
-1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\about.c
+1583849185 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\about.c
 	"header.h"
 
-1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\new_game.c
+1583875892 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\new_game.c
 	"header.h"
 
 1583627115 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_list_chaine.c
@@ -65,10 +66,10 @@
 
 1582119942 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_perso_stats.h
 
-1583836357 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats.c
+1583876312 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats.c
 	"header.h"
 
-1583770294 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats_h.h
+1583856699 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats_h.h
 
 1582286188 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie.c
 	<stdio.h>
@@ -76,30 +77,30 @@
 	"header.h"
 	"perso_stats_h.h"
 
-1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_init.c
+1583854326 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_init.c
 	"header.h"
 
-1583836357 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_update.c
+1583876470 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_update.c
 	"header.h"
 
 1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_use.c
 	"header.h"
 
-1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\map_and_more.c
+1583864700 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\map_and_more.c
 	"header.h"
 
-1583836357 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\moove.c
+1583865758 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\moove.c
 	"header.h"
 
-1583838866 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\in_game.c
+1583876437 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\in_game.c
 	"header.h"
 
 1583532147 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\map.h
 
-1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\show_map.c
+1583863674 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\show_map.c
 	"header.h"
 
-1583802784 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\combat.c
+1583848929 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\combat.c
 	"header.h"
 
 1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_color.c

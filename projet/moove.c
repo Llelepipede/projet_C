@@ -46,7 +46,7 @@ int    deplacement(t_map     ***map,char     moov)
             map[pos_joueur_map[0]][pos_joueur_map[1]]->map_type->design[pos_joueur[0]][pos_joueur[1]].maj = 1;
 
     }
-    if (map[pos_joueur_map[0]][pos_joueur_map[1]]->map_type->design[pos_joueur[0]][pos_joueur[1]].mob == 1)
+    if (map[pos_joueur_map[0]][pos_joueur_map[1]]->map_type->design[pos_joueur[0]][pos_joueur[1]].mob)
     {
         to_return = map[pos_joueur_map[0]][pos_joueur_map[1]]->map_type->district;
         free(pos_joueur);

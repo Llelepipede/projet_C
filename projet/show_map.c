@@ -109,6 +109,8 @@ void    show_map(t_map ***map,int sizeofmap)
                     printf(" ");
                     if (map[pos_joueur[0]][pos_joueur[1]]->map_type->design[k_memory-1][l_memory].case_teleporteur)
                         color(0,6);
+                    if (map[pos_joueur[0]][pos_joueur[1]]->map_type->design[k_memory-1][l_memory].heal)
+                        color(0,12);
                     if (map[pos_joueur[0]][pos_joueur[1]]->map_type->design[k_memory-1][l_memory].mob)
                         color(0,5);
                     if (map[pos_joueur[0]][pos_joueur[1]]->map_type->design[k_memory-1][l_memory].maj)
@@ -185,5 +187,27 @@ void    show_map(t_map ***map,int sizeofmap)
     }
 
     color(7,0);
-    printf("\n");
+}
+
+void    show_ath()
+{
+    color(3,0);
+    printf("deplacement: fleches |  stats: S  |  retourner au menu: echap\n");
+    color(2,0);
+    printf("\n(00)\n ");
+    color(0,2);
+    printf("  ");
+    color(3,0);
+    printf(" -> vous     ");
+    color(0,5);
+    printf("00");
+    color(3,0);
+    printf(" -> ennemi     ");
+    color(0,12);
+    printf("  ");
+    color(3,0);
+    printf(" -> soin");
+
+
+
 }

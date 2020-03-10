@@ -9,7 +9,7 @@ void     ask_space(char *choice)
 void    back_to_menu(int time)
 {
     int choice;
-    respond("(press Entr to return to menu)\n\n");
+    respond("(appuyez sur Entr pour retourner au menu)\n\n");
     do{
         choice = _getch();
     } while(choice != 13);
@@ -17,7 +17,7 @@ void    back_to_menu(int time)
     while(time)
     {
         printf(" .");
-        Sleep(1000);
+        Sleep(500);
         time--;
     }
     system("cls");

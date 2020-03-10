@@ -8,32 +8,42 @@ void    menu()
     color(3,0);
     printf("\t\t\t-MAIN MENU-\n\n\t\t1. Create New Game\n\t\t2. Load Saved Game\n\t\t3. About\n\t\t4. Exit\n");
     choice = _getch();
+    printf("%d",choice);
+    Sleep(300);
     t_Monstropedie *monstropedie;
     monstropedie = initiate_mob_Monst();
-    while (!(choice == 38 || choice == 130 || choice == 34 || choice == 39 || choice == 49 || choice == 50 || choice == 51 || choice == 52))
+    if (!(choice == 38 || choice == 130 || choice == 34 || choice == 39 || choice == 49 || choice == 50 || choice == 51 || choice == 52))
     {
         system("cls");
         if (choice == 42 || choice == 230) //etat du projet , tapez * pour faire apparaitre dans le menu
         {
-        respond("\tetat du projet\n");
-        respond("menu jeu : fait\n");
-        respond("stat personnage: en cours (70%) manque encore la partie xp\n");
-        respond("sauvegarde : 0\n");
-        respond("map : fini (a 95%) atributions des cases pas deffinies\n");
-        respond("combat : fini (a 90%) manque encore la partie xp\n");
-        respond("scenario : fini (a 100%)\n");
-        respond("deplacement : fini (a 100%)\n");
-        respond("item : 0\n");
-        respond("attaque critique : 0\n");
-        respond("monstre : fini (à 90%) manque encore la partie xp\n\n");
-        test_color();
+            respond("\tetat du projet\n");
+            respond("menu jeu : fait\n");
+            respond("stat personnage: fini (a 100%)\n");
+            respond("sauvegarde : 0\n");
+            respond("map : fini (a 95%) atributions des cases pas deffinies\n");
+            respond("combat : fini (a 100%)\n");
+            respond("scenario : fini (a 100%)\n");
+            respond("deplacement : fini (a 100%)\n");
+            respond("item : 0\n");
+            respond("attaque critique : 0\n");
+            respond("monstre : fini (a 100%)\n\n");
+            test_color();
         }
         if (choice == 36) //   ZONE DE TEST, mettre ici les fonctions a essayer , et entrez $ pour la demmarer dans le menu
         {
             personnage(monstropedie);
         }
+
+        if (choice == 39 || choice == 52)
+        {
+            respond("A la prochaine :)\n");
+            return;
+        }
+
         respond("connais pas\n");
         back_to_menu(3);
+
 
     }
     if (choice == 38 || choice == 49)
@@ -60,8 +70,12 @@ void    menu()
         about();
         back_to_menu(3);
     }
-    else
-        respond("A la prochaine :)\n");
+    else if (choice == 39 || choice == 52)
+     {
+            respond("A la prochaine :)\n");
+            return;
+
+     }
 
 }
 

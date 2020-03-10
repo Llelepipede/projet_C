@@ -3,7 +3,8 @@
 void         create_b_mob(t_Monstropedie *list,char *name, int hp, float hp_lvl, int mana, float mana_lvl, int attaque, float attaque_lvl, int deffense, float deffense_lvl, int vitesse, float vitesse_lvl, t_competence *comp)
 {
     b_perso *mob = malloc(sizeof(b_perso));
-    mob->name = name;
+    mob->name = (char*)malloc(sizeof(char)*15);
+    strcpy(mob->name,name);
 
     mob->b_hp = hp;
     mob->b_mana = mana;

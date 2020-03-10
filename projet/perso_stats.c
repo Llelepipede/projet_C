@@ -70,7 +70,11 @@ void    set_to_zero(perso *mob)
     mob->speed = 0;
 }
 
-
+void    heal(perso  *mob)
+{
+    mob->hp = mob->hp_max;
+    mob->mana = mob->mana_max;
+}
 
 void    set_lvl_up(b_perso base, perso *mob,int lvl)
 {
@@ -81,6 +85,9 @@ void    set_lvl_up(b_perso base, perso *mob,int lvl)
     mob->attac = base.b_attac;
     mob->deff = base.b_deff;
     mob->speed = base.b_speed;
+    mob->xp = 0;
+    mob->xp_not_lvl_up = 0;
+
 
     while(i<mob->lvl)
     {
@@ -89,10 +96,43 @@ void    set_lvl_up(b_perso base, perso *mob,int lvl)
         mob->attac += base.b_attac * base.lvl_up_impact[2];
         mob->deff += base.b_deff * base.lvl_up_impact[3];
         mob->speed += base.b_speed * base.lvl_up_impact[4];
+        mob->xp += (((i*i)+20)/2);
+        mob->xp_to_lvlup = (((i*i)+20)/2);
         i++;
     }
     mob->hp_max = mob->hp;
     mob->mana_max = mob->mana;
+}
+void    lvl_up(perso    *mob,b_perso    *base)
+{
+    mob->lvl += 1;
+    mob->xp_not_lvl_up = mob->xp_not_lvl_up%mob->xp_to_lvlup;
+    mob->xp += mob->xp_to_lvlup;
+    mob->xp_to_lvlup = (((mob->lvl*mob->lvl)+20)/2);
+    mob->hp_max += base->b_hp * base->lvl_up_impact[0];
+    mob->mana_max += base->b_mana * base->lvl_up_impact[1];
+    mob->attac += base->b_attac * base->lvl_up_impact[2];
+    mob->deff += base->b_deff * base->lvl_up_impact[3];
+    mob->speed += base->b_speed * base->lvl_up_impact[4];
+
+}
+
+
+void    show_stat_after_fight(perso monster,int     xp_earn)
+{
+
+    system("cls");
+    printf("\n\tVICTOIRE!\n\n");
+    int lvl = monster.lvl;
+    int hp = monster.hp/1;
+    int hp_max = monster.hp_max/1;
+    int mana = monster.mana/1;
+    int mana_max = monster.mana_max/1;
+    int attaque = monster.attac/1;
+    int deffense = monster.deff/1;
+    int vitesse = monster.speed/1;
+    printf("\n\t-%s-\tniveau:%d\n\texp\t->\t%d/%d + %d\n\thp\t->\t%d/%d\n\tmana\t->\t%d/%d\n\tattaque\t->\t%d\n\tdeffense->\t%d\n\tvitesse\t->\t%d\n",monster.name,lvl,monster.xp_not_lvl_up,monster.xp_to_lvlup,xp_earn,hp,hp_max,mana,mana_max,attaque,deffense,vitesse);
+    _getch();
 }
 
 
@@ -100,11 +140,15 @@ void    show_stat_of(perso monster)
 {
 
     int lvl = monster.lvl;
-    int hp = monster.hp/1.0;
-    int attaque = monster.attac/1.0;
-    int deffense = monster.deff/1.0;
-    int vitesse = monster.speed/1.0;
-    printf("\n\t-%s- niveau:%d\n\nhp->%d ()\nattaque->%d ( la valeur reel est: %f,arrondie pour plus de clarte)\ndeffense->%d\nvitesse->%d\n",monster.name,lvl,hp,attaque,monster.attac,deffense,vitesse);
+    int hp = monster.hp/1;
+    int hp_max = monster.hp_max/1;
+    int mana = monster.mana/1;
+    int mana_max = monster.mana_max/1;
+    int attaque = monster.attac/1;
+    int deffense = monster.deff/1;
+    int vitesse = monster.speed/1;
+    printf("\n\t-%s-\tniveau:%d\n\texp\t->\t%d/%d\n\thp\t->\t%d/%d\n\tmana\t->\t%d/%d\n\tattaque\t->\t%d\n\tdeffense->\t%d\n\tvitesse\t->\t%d\n",monster.name,lvl,monster.xp_not_lvl_up,monster.xp_to_lvlup,hp,hp_max,mana,mana_max,attaque,deffense,vitesse);
+    _getch();
 }
 
 
