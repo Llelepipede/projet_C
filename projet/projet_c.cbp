@@ -37,6 +37,12 @@
 		<Unit filename="combat.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="competence.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="competence.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="header.h" />
 		<Unit filename="in_game.c">
 			<Option compilerVar="CC" />
@@ -79,9 +85,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test_color.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="test_list_chaine.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="visual_change.c">

@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "header.h"
-#include <time.h>
-#include <windows.h>
 
 
 t_map   ***map_create(t_map ***map,int sizeofmap)
@@ -44,7 +40,7 @@ t_map   ***map_create(t_map ***map,int sizeofmap)
             }
             map[colonne][ligne]->map_type = (t_map_type*)malloc(sizeof(t_map_type));
             map[colonne][ligne]->map_type->design = (t_case_type**)malloc(sizeof(t_case_type*)*7);
-            map[colonne][ligne]->maj = 0;
+            map[colonne][ligne]->maj = 2;
             map[colonne][ligne]->map_type->color = colonne < 4 && ligne <= 4 ? 2 : colonne <= 4 && ligne > 4 ? 12 : colonne >= 4 && ligne < 4 ? 3 : colonne == 4 && ligne == 4 ? 8 : 4 ; //est foret pour l'instant
             map[colonne][ligne]->map_type->event = 0; //aucun evenement
             if  (map[colonne][ligne]->map_type->color == 2)
@@ -87,9 +83,6 @@ t_map   ***map_create(t_map ***map,int sizeofmap)
     map[4][4]->maj = 1;
     map[4][4]->map_type->design[0][3].case_teleporteur = 1;
     map[4][4]->map_type->design[3][3].maj =1;
-    map[5][2]->map_type->event = 1;
-    map[5][2]->map_type->design[3][3].mob = 1;
-    map[5][2]->map_type->design[3][3].passable = 1;
     //printf("%d\n",map[4][4]->map_type->design[1][1].color);
     //Sleep(300);
     //printf("malloc complete\n");

@@ -1,4 +1,4 @@
-
+#include "header.h"
 
 void  test_color()
 {
@@ -6,8 +6,8 @@ void  test_color()
 
     while(i<81)
     {
-        color(0,i%10);
-        printf("%d",i%10);
+        color(0,i%15);
+        printf("%d",i%15);
         i++;
     }
 }

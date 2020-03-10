@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "header.h"
-#include <time.h>
-#include <windows.h>
 
 t_Monstropedie     *initiate_mob_Monst()
 {
@@ -21,6 +17,7 @@ b_perso     initiate_mob(b_perso *previous,b_perso *next)
     mob->b_hp = 0;
     mob->b_attac = 0;
     mob->b_deff = 0;
+    mob->b_mana = 0;
     mob->b_speed = 0;
     while (i<5)
     {

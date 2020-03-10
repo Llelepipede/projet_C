@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "header.h"
-#include <time.h>
-#include <windows.h>
 
 
 void    menu()
@@ -21,12 +17,12 @@ void    menu()
         {
         respond("\tetat du projet\n");
         respond("menu jeu : fait\n");
-        respond("stat personnage: en cours(70%) manque encore la partie xp\n");
+        respond("stat personnage: en cours (70%) manque encore la partie xp\n");
         respond("sauvegarde : 0\n");
         respond("map : fini (a 95%) atributions des cases pas deffinies\n");
-        respond("combat : 0\n");
+        respond("combat : fini (a 90%) manque encore la partie xp\n");
         respond("scenario : fini (a 100%)\n");
-        respond("deplacement : fini (a 96%) verif pas faites \n");
+        respond("deplacement : fini (a 100%)\n");
         respond("item : 0\n");
         respond("attaque critique : 0\n");
         respond("monstre : fini (à 90%) manque encore la partie xp\n\n");

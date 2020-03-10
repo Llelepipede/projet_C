@@ -22,14 +22,10 @@
 	<stdio.h>
 	<stdlib.h>
 
-1583756974 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\main.c
-	<stdio.h>
-	<stdlib.h>
+1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\main.c
 	"header.h"
-	<time.h>
-	<windows.h>
 
-1583679588 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\header.h
+1583800883 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\header.h
 	"map.h"
 	"perso_stats_h.h"
 	<stdio.h>
@@ -37,37 +33,20 @@
 	<time.h>
 	<windows.h>
 
-1583630585 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\menu.c
-	<stdio.h>
-	<stdlib.h>
+1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\menu.c
 	"header.h"
-	<time.h>
-	<windows.h>
 
-1583627083 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\start.c
-	<stdio.h>
-	<stdlib.h>
+1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\start.c
 	"header.h"
-	<time.h>
-	<windows.h>
 
-1583627080 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\visual_change.c
-	<stdio.h>
-	<stdlib.h>
+1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\visual_change.c
 	"header.h"
-	<time.h>
-	<windows.h>
 
-1583481009 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\about.c
-	<stdio.h>
-	<stdlib.h>
-
-1583627401 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\new_game.c
-	<stdio.h>
-	<stdlib.h>
+1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\about.c
 	"header.h"
-	<time.h>
-	<windows.h>
+
+1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\new_game.c
+	"header.h"
 
 1583627115 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_list_chaine.c
 	<stdio.h>
@@ -86,14 +65,10 @@
 
 1582119942 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_perso_stats.h
 
-1583677977 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats.c
-	<stdio.h>
-	<stdlib.h>
+1583836357 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats.c
 	"header.h"
-	<time.h>
-	<windows.h>
 
-1583615538 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats_h.h
+1583770294 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\perso_stats_h.h
 
 1582286188 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie.c
 	<stdio.h>
@@ -101,59 +76,39 @@
 	"header.h"
 	"perso_stats_h.h"
 
-1583627083 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_init.c
-	<stdio.h>
-	<stdlib.h>
+1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_init.c
 	"header.h"
-	<time.h>
-	<windows.h>
 
-1583627302 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_update.c
-	<stdio.h>
-	<stdlib.h>
+1583836357 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_update.c
 	"header.h"
-	<time.h>
-	<windows.h>
 
-1583627083 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_use.c
-	<stdio.h>
-	<stdlib.h>
+1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\monstropedie_use.c
 	"header.h"
-	<time.h>
-	<windows.h>
 
-1583756747 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\map_and_more.c
-	<stdio.h>
-	<stdlib.h>
+1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\map_and_more.c
 	"header.h"
-	<time.h>
-	<windows.h>
 
-1583674787 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\moove.c
-	<stdio.h>
-	<stdlib.h>
+1583836357 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\moove.c
 	"header.h"
-	<time.h>
-	<windows.h>
 
-1583678360 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\in_game.c
-	<stdio.h>
-	<stdlib.h>
+1583838866 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\in_game.c
 	"header.h"
-	<time.h>
-	<windows.h>
 
 1583532147 c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\map.h
 
-1583682283 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\show_map.c
+1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\show_map.c
+	"header.h"
+
+1583802784 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\combat.c
+	"header.h"
+
+1583836358 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_color.c
+	"header.h"
+
+1583762123 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\ft_itoa.c
 	<stdio.h>
 	<stdlib.h>
-	"header.h"
-	<time.h>
-	<windows.h>
 
-1583758742 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\combat.c
+1583773109 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\competence.c
 	"header.h"
-
-1583678628 source:c:\users\ynov\documents\cours_ynov\c\cours\projet_c\projet\test_color.c
 

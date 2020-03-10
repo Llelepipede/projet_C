@@ -48,7 +48,7 @@ t_Monstropedie  *initiate_mob_Monst();
 b_perso         initiate_mob(b_perso *previous,b_perso *next);
 
 /*monstropedie_update.c*/
-void            create_b_mob(t_Monstropedie *list,char *name, int hp, float hp_lvl, int attaque, float attaque_lvl, int deffense, float deffense_lvl, int vitesse, float vitesse_lvl);
+void            create_b_mob(t_Monstropedie *list,char *name, int hp, float hp_lvl, int mana, float , int attaque, float attaque_lvl, int deffense, float deffense_lvl, int vitesse, float vitesse_lvl, t_competence *comp);
 void            add_mob(t_Monstropedie *list,b_perso *mob);
 
 /*monstropedie_use.c*/
@@ -69,8 +69,13 @@ int             deplacement(t_map ***map,char     moov);
 /*test_color.c*/
 void  test_color();
 
+/*in_game*/
+void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list);
+
 /*combat.c*/
-void    combat(perso    *player,perso    *mob);
+int    combat(perso    *player,perso    *mob);
+void    do_comp(perso *attaquant, perso *defenseur, perso *player, perso *mob);
+void    attaque(perso *attaquant, perso *defenseur, perso *player, perso *mob);
 void    show_combat(perso    *player,perso    *mob);
 
 #endif // HEADER_H_INCLUDED

@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "header.h"
-#include <time.h>
-#include <windows.h>
 
 
 b_perso     *find_in_monstropedie(t_Monstropedie *m_list,char *name)
