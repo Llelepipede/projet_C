@@ -10,6 +10,8 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list)
     int nb_of_mob = 0;
     int xp_earn;
 
+    int victory_point = 0;
+
     int compteur_dep = 0;
     int random1;
     int random2;
@@ -46,8 +48,8 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list)
             do{
                 random1 = rand()%9;
                 random2 = rand()%9;
-            }while (map[random1][random2]->map_type->event == 1);
-            map[random1][random2]->map_type->event=1;
+            }while ((map[random1][random2]->map_type->event == 1) || ((random1 == 1 && random2 == 2) || (random1 == 2 && random2 == 7) || (random1 == 7 && random2 == 6) || (random1 == 6 && random2 == 1) || (random1 == 4 && random2 == 4)));;
+            map[random1][random2]->map_type->event = 1;
             do{
                 random3 = rand()%7;
                 random4 = rand()%7;
@@ -129,14 +131,24 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list)
             {
                 random_lvl = joueur->lvl + 8;
                 random_lvl = random_lvl>10 ? 10 : random_lvl;
-                if (on_mob == 3)
-                    mob_name = "Rasta-blanc";
-                if (on_mob == 2)
-                    mob_name = "Ali ton ami";
-                if (on_mob == 1)
-                    mob_name = "La Belle Mere";
                 if (on_mob == 4)
+                    mob_name = "Rasta-blanc";
+                if (on_mob == 3)
+                    mob_name = "Ali ton ami";
+                if (on_mob == 2)
+                    mob_name = "La Belle Mere";
+                if (on_mob == 5)
                     mob_name = "Pakoafer";
+            }
+            else if (on_mob == 1)
+            {
+                random_lvl = joueur->lvl + 10;
+                random_lvl = random_lvl>15 ? 15 : random_lvl;
+                create_mob(find_in_monstropedie(list,"Janin Genieux"),joueur,joueur->lvl);
+
+                // //
+
+                mob_name = "Gout Loom";
             }
             else
             {
@@ -144,13 +156,13 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list)
                 random_lvl = joueur->lvl+(random_lvl-3);
                 if (random_lvl<1)
                     random_lvl = 1;
-                if (on_mob == 3)
-                    mob_name = "Glagladiateur";
-                if (on_mob == 2)
-                    mob_name = "Jony";
-                if (on_mob == 1)
-                    mob_name = "Farmer";
                 if (on_mob == 4)
+                    mob_name = "Glagladiateur";
+                if (on_mob == 3)
+                    mob_name = "Jony";
+                if (on_mob == 2)
+                    mob_name = "Farmer";
+                if (on_mob == 5)
                     mob_name = "Roucky";
             }
             create_mob(find_in_monstropedie(list,mob_name),&mob,random_lvl);
@@ -166,8 +178,10 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list)
                 }
                 map[x_map][y_map]->map_type->event=0;
                 map[x_map][y_map]->map_type->design[x_case][y_case].mob=0;
-                if (!((x_map == 1 && y_map == 2) || (x_map == 2 && y_map == 7) || (x_map == 7 && y_map == 6) || (x_map == 6 && y_map == 1)))
+                if (!((x_map == 1 && y_map == 2) || (x_map == 2 && y_map == 7) || (x_map == 7 && y_map == 6) || (x_map == 6 && y_map == 1) || (x_map == 4 && y_map == 4)))
                     nb_of_mob--;
+                else
+                    victory_point++;
             }
             if (result_combat == 0)
             {
@@ -188,7 +202,27 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list)
             }
 
 
+
         }
+        if (victory_point == 4)
+        {
+            map[4][4]->map_type->event = 1;
+            map[4][4]->map_type->design[3][3].mob = 2;
+            map[4][4]->map_type->design[3][3].passable = 1;
+            map[4][4]->map_type->design[3][3].color = 13;
+        }
+        if (victory_point == 5)
+        {
+            printf("\n\n\t\tVOUS AVEZ VAINCU LE GRAND GOUT LOOM !!!\n\n\t\tFin de la partie...\n");
+            free(list);
+            free(map);
+            free(joueur);
+            free(pos_joueur_map);
+            free(pos_joueur);
+            return;
+        }
+
+
         show_map(map,9);
 
 

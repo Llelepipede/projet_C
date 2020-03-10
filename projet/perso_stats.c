@@ -122,7 +122,7 @@ void    show_stat_after_fight(perso monster,int     xp_earn)
 {
 
     system("cls");
-    printf("\n\tVICTOIRE!\n\n");
+    printf("\n\t\tVICTOIRE!\n\n");
     int lvl = monster.lvl;
     int hp = monster.hp/1;
     int hp_max = monster.hp_max/1;
