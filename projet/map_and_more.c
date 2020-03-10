@@ -40,7 +40,7 @@ t_map   ***map_create(t_map ***map,int sizeofmap)
             }
             map[colonne][ligne]->map_type = (t_map_type*)malloc(sizeof(t_map_type));
             map[colonne][ligne]->map_type->design = (t_case_type**)malloc(sizeof(t_case_type*)*7);
-            map[colonne][ligne]->maj = 2;  //POUR TOUT AFFICHERRRR : 2, sinon 0
+            map[colonne][ligne]->maj = 0;  //POUR TOUT AFFICHERRRR : 2, sinon 0
             map[colonne][ligne]->map_type->color = colonne < 4 && ligne <= 4 ? 2 : colonne <= 4 && ligne > 4 ? 12 : colonne >= 4 && ligne < 4 ? 3 : colonne == 4 && ligne == 4 ? 8 : 4 ; //est foret pour l'instant
             map[colonne][ligne]->map_type->event = 0; //aucun evenement
             if  (map[colonne][ligne]->map_type->color == 2)

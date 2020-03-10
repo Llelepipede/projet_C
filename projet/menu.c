@@ -8,7 +8,6 @@ void    menu()
     color(3,0);
     printf("\t\t\t-MAIN MENU-\n\n\t\t1. Create New Game\n\t\t2. Load Saved Game\n\t\t3. About\n\t\t4. Exit\n");
     choice = _getch();
-    printf("%d",choice);
     Sleep(300);
     t_Monstropedie *monstropedie;
     monstropedie = initiate_mob_Monst();
