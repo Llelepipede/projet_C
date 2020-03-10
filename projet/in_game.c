@@ -51,7 +51,7 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list)
             do{
                 random3 = rand()%7;
                 random4 = rand()%7;
-            } while ((map[random1][random2]->map_type->design[random3][random4].maj) || (map[random1][random2]->map_type->design[random3][random4].case_teleporteur) || (map[random1][random2]->map_type->design[random3][random4].mob) || !(map[random1][random2]->map_type->design[random3][random4].passable));
+            } while ((map[random1][random2]->map_type->design[random3][random4].maj) || (map[random1][random2]->map_type->design[random3][random4].heal) ||(map[random1][random2]->map_type->design[random3][random4].case_teleporteur) || (map[random1][random2]->map_type->design[random3][random4].mob) || !(map[random1][random2]->map_type->design[random3][random4].passable));
 
 
             map[random1][random2]->map_type->design[random3][random4].mob=1;
@@ -134,7 +134,7 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list)
                 if (on_mob == 2)
                     mob_name = "Ali ton ami";
                 if (on_mob == 1)
-                    mob_name = "La Belle mere";
+                    mob_name = "La Belle Mere";
                 if (on_mob == 4)
                     mob_name = "Pakoafer";
             }
@@ -166,6 +166,8 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list)
                 }
                 map[x_map][y_map]->map_type->event=0;
                 map[x_map][y_map]->map_type->design[x_case][y_case].mob=0;
+                if (!((x_map == 1 && y_map == 2) || (x_map == 2 && y_map == 7) || (x_map == 7 && y_map == 6) || (x_map == 6 && y_map == 1)))
+                    nb_of_mob--;
             }
             if (result_combat == 0)
             {

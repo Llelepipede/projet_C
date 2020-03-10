@@ -15,8 +15,8 @@ void    new_game()
     create_b_mob(list,"Janin Genieux" ,300       ,0.1   ,50  ,0.1     ,20     ,0.1    ,10  ,0.1     ,27     ,0.1        ,create_comp("competence_janin"     ,2      ,1      ,200  ,-2   ,40    ,3   ));
     create_b_mob(list,"La Belle Mere" ,50        ,0.135 ,10  ,0.1     ,22     ,0.087  ,6   ,0.04    ,23     ,0.1        ,create_comp("ton_ex_etait_mieux"   ,2      ,1      ,70   ,0    ,0     ,12  ));
     create_b_mob(list,"Ali ton ami"   ,100       ,0.1   ,9   ,0.1     ,15     ,0.07   ,15  ,0.12    ,15     ,0.067      ,create_comp("annee vingt vingt"    ,2      ,1      ,60   ,0    ,0     ,4   ));
-    create_b_mob(list,"Pakoafer"      ,150       ,0.1   ,50  ,0.1     ,4      ,0.05   ,10  ,0.12    ,7      ,0.067      ,create_comp("KaKette!"             ,2      ,1      ,30   ,0    ,0     ,6   ));
-    create_b_mob(list,"Rasta-blanc"   ,70        ,0.1   ,50  ,0.1     ,7      ,0.07   ,2   ,0.12    ,23     ,0.067      ,create_comp("Matrix"               ,2      ,1      ,50   ,0    ,0     ,6   ));
+    create_b_mob(list,"Pakoafer"      ,150       ,0.1   ,50  ,0.1     ,13     ,0.05   ,10  ,0.12    ,7      ,0.067      ,create_comp("KaKette!"             ,2      ,1      ,30   ,0    ,0     ,6   ));
+    create_b_mob(list,"Rasta-blanc"   ,80        ,0.1   ,50  ,0.1     ,11     ,0.07   ,2   ,0.12    ,23     ,0.067      ,create_comp("Matrix"               ,2      ,1      ,50   ,0    ,0     ,6   ));
     create_b_mob(list,"Gout Loom"     ,125       ,0.13  ,20  ,0.1     ,10     ,0.098  ,20  ,0.157   ,27     ,0.1        ,create_comp("LA_FERME"             ,2      ,1      ,50   ,0    ,0     ,10  ));
     create_b_mob(list,"Farmer"        ,35        ,0.18  ,10  ,0.1     ,6      ,0.1    ,7   ,0.157   ,14     ,0.1        ,create_comp("libertine"            ,1      ,2      ,50   ,1    ,20    ,6   ));
     create_b_mob(list,"Jony"          ,38        ,0.18  ,9   ,0.1     ,7      ,0.098  ,3   ,0.157   ,9      ,0.1        ,create_comp("Allumer_le_feu"       ,2      ,1      ,60   ,0    ,0     ,7   ));

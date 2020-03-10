@@ -131,7 +131,7 @@ void    show_stat_after_fight(perso monster,int     xp_earn)
     int attaque = monster.attac/1;
     int deffense = monster.deff/1;
     int vitesse = monster.speed/1;
-    printf("\n\t-%s-\tniveau:%d\n\texp\t->\t%d/%d + %d\n\thp\t->\t%d/%d\n\tmana\t->\t%d/%d\n\tattaque\t->\t%d\n\tdeffense->\t%d\n\tvitesse\t->\t%d\n",monster.name,lvl,monster.xp_not_lvl_up,monster.xp_to_lvlup,xp_earn,hp,hp_max,mana,mana_max,attaque,deffense,vitesse);
+    printf("\n\t-%s-\tniveau:%d\n\texp\t->\t%d/%d + %d %s\n\thp\t->\t%d/%d\n\tmana\t->\t%d/%d\n\tattaque\t->\t%d\n\tdeffense->\t%d\n\tvitesse\t->\t%d\n",monster.name,lvl,monster.xp_not_lvl_up,monster.xp_to_lvlup,xp_earn,(xp_earn+monster.xp_not_lvl_up>=monster.xp_to_lvlup ? "(LVL UP!)": " "),hp,hp_max,mana,mana_max,attaque,deffense,vitesse);
     _getch();
 }
 

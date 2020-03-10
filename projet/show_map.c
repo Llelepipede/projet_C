@@ -110,7 +110,7 @@ void    show_map(t_map ***map,int sizeofmap)
                     if (map[pos_joueur[0]][pos_joueur[1]]->map_type->design[k_memory-1][l_memory].case_teleporteur)
                         color(0,6);
                     if (map[pos_joueur[0]][pos_joueur[1]]->map_type->design[k_memory-1][l_memory].heal)
-                        color(0,12);
+                        color(0,14);
                     if (map[pos_joueur[0]][pos_joueur[1]]->map_type->design[k_memory-1][l_memory].mob)
                         color(0,5);
                     if (map[pos_joueur[0]][pos_joueur[1]]->map_type->design[k_memory-1][l_memory].maj)
@@ -203,7 +203,7 @@ void    show_ath()
     printf("00");
     color(3,0);
     printf(" -> ennemi     ");
-    color(0,12);
+    color(0,14);
     printf("  ");
     color(3,0);
     printf(" -> soin");
