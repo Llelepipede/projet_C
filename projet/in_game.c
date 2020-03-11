@@ -188,6 +188,7 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list)
                 system("cls");
                 printf("\n\n\n");
                 respond("G A M E   O V E R\n\n");
+                trololol();
                 free(list);
                 free(map);
                 free(joueur);
@@ -227,4 +228,6 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list)
 
 
     }
+
+
 }
