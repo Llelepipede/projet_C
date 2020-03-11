@@ -41,15 +41,15 @@ t_map   ***map_create(t_map ***map,int sizeofmap)
             map[colonne][ligne]->map_type = (t_map_type*)malloc(sizeof(t_map_type));
             map[colonne][ligne]->map_type->design = (t_case_type**)malloc(sizeof(t_case_type*)*7);
             map[colonne][ligne]->maj = 0;  //POUR TOUT AFFICHERRRR : 2, sinon 0
-            map[colonne][ligne]->map_type->color = colonne < 4 && ligne <= 4 ? 2 : colonne <= 4 && ligne > 4 ? 12 : colonne >= 4 && ligne < 4 ? 3 : colonne == 4 && ligne == 4 ? 8 : 4 ; //est foret pour l'instant
+            map[colonne][ligne]->map_type->color = colonne < 4 && ligne <= 4 ? 2 : colonne <= 4 && ligne > 4 ? 4 : colonne >= 4 && ligne < 4 ? 3 : colonne == 4 && ligne == 4 ? 8 : 14 ; //est foret pour l'instant
             map[colonne][ligne]->map_type->event = 0; //aucun evenement
             if  (map[colonne][ligne]->map_type->color == 2)
                 map[colonne][ligne]->map_type->district = 1; //aucun district
-            else if  (map[colonne][ligne]->map_type->color == 12)
+            else if  (map[colonne][ligne]->map_type->color == 4)
                 map[colonne][ligne]->map_type->district = 2;
             else if  (map[colonne][ligne]->map_type->color == 3)
                 map[colonne][ligne]->map_type->district = 3;
-            else if  (map[colonne][ligne]->map_type->color == 4)
+            else if  (map[colonne][ligne]->map_type->color == 14)
                 map[colonne][ligne]->map_type->district = 4;
             else
                 map[colonne][ligne]->map_type->district = 0;
@@ -70,7 +70,7 @@ t_map   ***map_create(t_map ***map,int sizeofmap)
 
                     map[colonne][ligne]->map_type->design[in_map_colonne][in_map_ligne].maj = 0;
 
-                    map[colonne][ligne]->map_type->design[in_map_colonne][in_map_ligne].color = random == 1 && !(map[colonne][ligne]->map_type->design[in_map_colonne][in_map_ligne].case_teleporteur)? 0 : colonne < 4 && ligne <= 4 ? 2 : colonne <= 4 && ligne > 4 ? 12 : colonne >= 4 && ligne < 4 ? 3 : colonne == 4 && ligne == 4 ? 8 : 4 ;
+                    map[colonne][ligne]->map_type->design[in_map_colonne][in_map_ligne].color = random == 1 && !(map[colonne][ligne]->map_type->design[in_map_colonne][in_map_ligne].case_teleporteur)? 0 : colonne < 4 && ligne <= 4 ? 2 : colonne <= 4 && ligne > 4 ? 4 : colonne >= 4 && ligne < 4 ? 3 : colonne == 4 && ligne == 4 ? 8 : 14 ;
                     in_map_ligne++;
                 }
                 in_map_colonne++;

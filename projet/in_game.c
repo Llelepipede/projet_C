@@ -145,8 +145,8 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list)
                 random_lvl = joueur->lvl + 10;
                 random_lvl = random_lvl>15 ? 15 : random_lvl;
                 create_mob(find_in_monstropedie(list,"Janin Genieux"),joueur,joueur->lvl);
-
-                // //
+                printf("\n\n Janin Genieux : J'ai fini mon gouter. AHHH tu en deja la, attends je vais t'aider. \n");
+                _getch();
 
                 mob_name = "Gout Loom";
             }

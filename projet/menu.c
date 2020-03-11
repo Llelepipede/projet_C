@@ -19,13 +19,13 @@ void    menu()
             respond("\tetat du projet\n");
             respond("menu jeu : fait\n");
             respond("stat personnage: fini (a 100%)\n");
-            respond("sauvegarde : 0\n");
-            respond("map : fini (a 95%) atributions des cases pas deffinies\n");
+            respond("sauvegarde : en cours \n");
+            respond("map : fini (a 100%) \n");
             respond("combat : fini (a 100%)\n");
             respond("scenario : fini (a 100%)\n");
             respond("deplacement : fini (a 100%)\n");
             respond("item : 0\n");
-            respond("attaque critique : 0\n");
+            respond("attaque critique : fini (a 100%) \n");
             respond("monstre : fini (a 100%)\n\n");
             test_color();
         }

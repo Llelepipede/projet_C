@@ -5,12 +5,26 @@ void    new_game()
 {
     int     sizeofmap = 9;
     t_map     ***map;
-    char    name[15];
+    char    name[20];
     int     i=0;
     t_Monstropedie *list;
     list = initiate_mob_Monst();
     respond("Quelle est votre nom ? (- de 20 caracteres)\n");
     scanf("%s",&name);
+    printf("\n ??? : Bienvenue %s \n\n",name);
+    _getch();
+    printf(" %s : Qui etes vous ? \n\n",name);
+    _getch();
+    printf(" Janin Genieux : Je suis Janin Genieux, je suis la pour te guider dans cette aventure. Ta quete est de detruire le \ndemoniaque Gout loom, cependant il est protege par les quatres gardiens, chef des districts \n(PS : Couleur differentes sur la carte). \n\n");
+    _getch();
+    printf("%s : Pourquoi moi ? \n\n",name);
+    _getch();
+    printf(" Janin Genieux : Tu es l'elu, le divin heritier du SAINT COUTEAU CASQUE, tiens va et finis ta quete \n(PS : Pssst je reviens apres le gouter). \n\n");
+    _getch();
+    printf(" *pouf Janin Genieux disparait dans un ecran de fumee* \n\n");
+    _getch();
+    printf(" %s : Attends part pas, il me reste tant de questions a te poser. \nPfff je retourne a la fika \n\n",name);
+    _getch();
                                      //Heal point|hp/lvl|mana|mana/lvl|attaque|att/lvl|deff|deff/lvl|vitesse|vitesse/lvl|competence  |name                  |target |effect |attk%|bonus|bonus%|cost
     create_b_mob(list,"Janin Genieux" ,300       ,0.1   ,50  ,0.1     ,20     ,0.1    ,10  ,0.1     ,27     ,0.1        ,create_comp("Okan au tableau!"     ,2      ,1      ,200  ,-2   ,40    ,3   ));
     create_b_mob(list,"La Belle Mere" ,50        ,0.135 ,10  ,0.1     ,22     ,0.087  ,6   ,0.04    ,23     ,0.1        ,create_comp("ton_ex_etait_mieux"   ,2      ,1      ,70   ,0    ,0     ,12  ));

@@ -176,7 +176,7 @@ void    attaque(perso *attaquant,perso *defenseur, perso *player, perso *mob)
     float     deff = defenseur->deff;
 
     srand(time(NULL));
-    critical_hit = rand()%20;
+    critical_hit = rand()%15;
     if (!(critical_hit))
         attk += attk/2;
     dammage_to_do_f = (attk+(attk*10/100));
@@ -185,11 +185,11 @@ void    attaque(perso *attaquant,perso *defenseur, perso *player, perso *mob)
 
     defenseur->hp -= dammage_to_endure_i;
 
-    printf("%s frappe %s de toute ces forces,\n%s%s inflige %d point%c de degat%c",attaquant->name,defenseur->name,attaquant->name,!(critical_hit)?"COUP CRITIQUE !!!\n": " " ,dammage_to_endure_i,dammage_to_endure_i>1?'s':' ',dammage_to_endure_i>1?'s':' ');
+    printf("%s frappe %s de toute ces forces,\n%s%s inflige %d point%c de degat%c",attaquant->name,defenseur->name,!(critical_hit)?"COUP CRITIQUE !!!\n": " ",attaquant->name,dammage_to_endure_i,dammage_to_endure_i>1?'s':' ',dammage_to_endure_i>1?'s':' ');
     _getch();
     system("cls");
     show_combat(player,mob);
-    printf("%s frappe %s de toute ces forces,\n%s%s inflige %d point%c de degat%c\n",attaquant->name,defenseur->name,attaquant->name,!(critical_hit)?"COUP CRITIQUE !!!\n": " " ,dammage_to_endure_i,dammage_to_endure_i>1?'s':' ',dammage_to_endure_i>1?'s':' ');
+    printf("%s frappe %s de toute ces forces,\n%s%s inflige %d point%c de degat%c\n",attaquant->name,defenseur->name,!(critical_hit)?"COUP CRITIQUE !!!\n": " " ,attaquant->name,dammage_to_endure_i,dammage_to_endure_i>1?'s':' ',dammage_to_endure_i>1?'s':' ');
 }
 
 void    do_comp(perso *attaquant, perso *defenseur, perso *player, perso *mob)
@@ -204,7 +204,7 @@ void    do_comp(perso *attaquant, perso *defenseur, perso *player, perso *mob)
     float     deff = defenseur->deff;
 
     srand(time(NULL));
-    critical_hit = rand()%20;
+    critical_hit = rand()%15;
     if (!(critical_hit))
         attk += attk/2;
     if (attaquant->comp->cost <= attaquant->mana/1)
@@ -244,7 +244,7 @@ void    do_comp(perso *attaquant, perso *defenseur, perso *player, perso *mob)
             defenseur->hp = defenseur->hp_max;
         attaquant->mana -= attaquant->comp->cost;
 
-        printf("%s utilise:\"%s\" sur %s,\n%s%s %s %d point%c de degat%c\n",attaquant->name,attaquant->comp->name,(attaquant->comp->target == 1 ? attaquant->name : defenseur->name),(attaquant->comp->target == 1 ? attaquant->name : defenseur->name),!(critical_hit)?"COUP CRITIQUE !!!\n": " " ,(attaquant->comp->target == 1 ? "se soigne de" : "subit"),dammage_to_endure_i,dammage_to_endure_i>1?'s':' ',dammage_to_endure_i>1?'s':' ');
+        printf("%s utilise:\"%s\" sur %s,\n%s%s %s %d point%c de degat%c\n",attaquant->name,attaquant->comp->name,(attaquant->comp->target == 1 ? attaquant->name : defenseur->name),!(critical_hit)?"COUP CRITIQUE !!!\n": " " ,(attaquant->comp->target == 1 ? attaquant->name : defenseur->name),(attaquant->comp->target == 1 ? "se soigne de" : "subit"),dammage_to_endure_i,dammage_to_endure_i>1?'s':' ',dammage_to_endure_i>1?'s':' ');
          if (attaquant->comp->bonus_effect==1 || attaquant->comp->bonus_effect==-1)
         {
             attaquant->attac = (attaquant->attac)+(((attaquant->comp->bonus_effect > 0 ? 1 : -1)*attaquant->comp->bonus_effect_rate/100.0 )* attaquant->attac);
