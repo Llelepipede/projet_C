@@ -224,6 +224,7 @@ void    do_comp(perso *attaquant, perso *defenseur, perso *player, perso *mob)
             }
             if (attaquant->comp->bonus_effect==2 || attaquant->comp->bonus_effect==-2)
             {
+
                 defenseur->deff = (defenseur->deff)+((attaquant->comp->bonus_effect > 0 ? 1 : -1)*attaquant->comp->bonus_effect_rate/100.0 * defenseur->deff);
             }
             if (attaquant->comp->bonus_effect==3 || attaquant->comp->bonus_effect==-3)
@@ -248,17 +249,17 @@ void    do_comp(perso *attaquant, perso *defenseur, perso *player, perso *mob)
          if (attaquant->comp->bonus_effect==1 || attaquant->comp->bonus_effect==-1)
         {
             attaquant->attac = (attaquant->attac)+(((attaquant->comp->bonus_effect > 0 ? 1 : -1)*attaquant->comp->bonus_effect_rate/100.0 )* attaquant->attac);
-            printf("%s a augmente son attaque de %d %% \n",attaquant->name,attaquant->comp->bonus_effect_rate);
+            printf("%s a %s %d %% \n",attaquant->name,(attaquant->comp->bonus_effect < 0 ? "reduit l'attaque de la cible de" : "augmente son attaque de"),attaquant->comp->bonus_effect_rate);
         }
         if (attaquant->comp->bonus_effect==2 || attaquant->comp->bonus_effect==-2)
         {
             attaquant->deff = (attaquant->deff)+(((attaquant->comp->bonus_effect > 0 ? 1 : -1)*attaquant->comp->bonus_effect_rate/100.0 )* attaquant->deff);
-            printf("%s a augmente sa deffense de %d %% \n",attaquant->name,attaquant->comp->bonus_effect_rate);
+            printf("%s a %s %d %% \n",attaquant->name,(attaquant->comp->bonus_effect < 0 ? "reduit la defense de la cible de" : "augmente sa defense de"),attaquant->comp->bonus_effect_rate);
         }
         if (attaquant->comp->bonus_effect==3 || attaquant->comp->bonus_effect==-3)
         {
             attaquant->speed = (attaquant->speed)+(((attaquant->comp->bonus_effect > 0 ? 1 : -1)*attaquant->comp->bonus_effect_rate/100.0 )* attaquant->speed);
-            printf("%s a augmente sa vitesse de %d %% \n",attaquant->name,attaquant->comp->bonus_effect_rate);
+            printf("%s a %s %d %% \n",attaquant->name,(attaquant->comp->bonus_effect < 0 ? "reduit la vitesse de la cible de" : "augmente sa vitesse de"),attaquant->comp->bonus_effect_rate);
         }
         _getch();
         system("cls");

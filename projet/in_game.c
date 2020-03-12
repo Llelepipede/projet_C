@@ -169,7 +169,7 @@ void    in_game(t_map ***map,perso *joueur,t_Monstropedie *list)
             result_combat = combat(joueur,&mob);
             if (result_combat == 1)
             {
-                xp_earn = sqrt(mob.xp)*(((mob.lvl-1)/mob.lvl)+1);
+                xp_earn = sqrt(mob.xp*2)*(((mob.lvl-1)/mob.lvl)+1);
                 show_stat_after_fight(*joueur,xp_earn);
                 joueur->xp_not_lvl_up += xp_earn;
                 while (joueur->xp_not_lvl_up >= joueur->xp_to_lvlup)
